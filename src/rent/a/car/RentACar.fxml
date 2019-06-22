@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="paneRent" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rent.a.car.RentACarController">
+   <children>
+      <SplitPane dividerPositions="0.25389755011135856, 0.3463251670378619, 0.43875278396436523, 0.5" prefHeight="69.0" prefWidth="900.0" style="-fx-background-color: #75a3ec;-fx-background-insets: 10; -fx-effect: dropshadow(three-pass-box, #75a3ec, 10, 0, 0, 0);">
+        <items>
+            <Text fx:id="lblRent" fill="WHITE" onMouseClicked="#rent" strokeType="OUTSIDE" strokeWidth="0.0" text="RENT" textAlignment="CENTER" wrappingWidth="191.8310546875">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </Text>
+            <Text fx:id="lblKlientet" fill="WHITE" onMouseClicked="#klientet" strokeType="OUTSIDE" strokeWidth="0.0" text="KLIENTET" textAlignment="CENTER" wrappingWidth="207.8310546875">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+               
+            </Text>
+            <Text fx:id="lblVeturat" fill="WHITE" onMouseClicked="#veturat" strokeType="OUTSIDE" strokeWidth="0.0" text="VETURAT" textAlignment="CENTER" wrappingWidth="230.8310546875">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </Text>
+            <Text fx:id="lblchat" fill="WHITE" onMouseClicked="#chat" strokeType="OUTSIDE" strokeWidth="0.0" text="CHAT" textAlignment="CENTER" wrappingWidth="183.8310546875">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </Text>
+            <ImageView fx:id="btnExit" fitHeight="47.0" fitWidth="141.0" onMouseClicked="#exit" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/logout.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor></ImageView>
+        </items>
+         
+      </SplitPane>
+      <AnchorPane fx:id="paneRent1" layoutY="69.0" prefHeight="530.0" prefWidth="900.0">
+         <children>
+            <DatePicker fx:id="txtPrej" layoutX="150.0" layoutY="91.0" />
+            <DatePicker fx:id="txtDeri" layoutX="437.0" layoutY="93.0" />
+            <TextField fx:id="txtOraPrej" layoutX="148.0" layoutY="127.0" prefHeight="25.0" prefWidth="174.0" />
+            <TextField fx:id="txtCmimi" alignment="CENTER_RIGHT" layoutX="437.0" layoutY="169.0" prefHeight="25.0" prefWidth="174.0" promptText="€" />
+            <Label layoutX="90.0" layoutY="257.0" text="Emri" />
+            <TextField fx:id="txtEmri" layoutX="151.0" layoutY="257.0" prefHeight="25.0" prefWidth="174.0" />
+            <TextField fx:id="txtMbiemri" layoutX="435.0" layoutY="257.0" prefHeight="25.0" prefWidth="174.0" />
+            <TextField fx:id="txtNrId" layoutX="151.0" layoutY="294.0" prefHeight="25.0" prefWidth="174.0" />
+            <TextField fx:id="txtNrTel" layoutX="435.0" layoutY="294.0" prefHeight="25.0" prefWidth="174.0" />
+            <TextField fx:id="txtAdresa" layoutX="151.0" layoutY="333.0" prefHeight="25.0" prefWidth="174.0" />
+            <Label layoutX="87.0" layoutY="91.0" text="Prej" />
+            <Label layoutX="404.0" layoutY="95.0" text="Deri" />
+            <Label layoutX="87.0" layoutY="127.0" text="Ora" />
+            <Label layoutX="90.0" layoutY="294.0" text="Nr. ID" />
+            <Label layoutX="87.0" layoutY="173.0" text="Vetura" />
+            <Label layoutX="398.0" layoutY="173.0" text="Cmimi" />
+            <Label layoutX="361.0" layoutY="257.0" text="Mbiemri" />
+            <Label layoutX="361.0" layoutY="294.0" text="Telefoni" />
+            <Label layoutX="90.0" layoutY="333.0" text="Adresa" />
+            <Label layoutX="87.0" layoutY="408.0" text="Pagesa:">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblPagesa" layoutX="152.0" layoutY="408.0" prefHeight="27.0" prefWidth="174.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="rentBtn" layoutX="495.0" layoutY="397.0" mnemonicParsing="false" onAction="#pagesa" prefHeight="50.0" prefWidth="116.0" text="RENT">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Label layoutX="90.0" layoutY="226.0" text="Te dhenat e klientit:">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="llogaritBtn" layoutX="368.0" layoutY="397.0" mnemonicParsing="false" onAction="#llogarit" prefHeight="50.0" prefWidth="116.0" text="LLOGARIT">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="chVetura" layoutX="147.0" layoutY="169.0" prefHeight="25.0" prefWidth="174.0" />
+            <Label fx:id="lblError" layoutX="90.0" layoutY="369.0" prefHeight="17.0" prefWidth="515.0" textFill="#f20000" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="686.0" layoutY="343.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/logo.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblUseri" layoutX="17.0" layoutY="6.0" prefHeight="17.0" prefWidth="184.0">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnRegjistroPuntore" layoutX="17.0" layoutY="29.0" mnemonicParsing="false" onAction="#regjistroPunetore" text="Regjistro puntore" visible="false" />
+            <Button fx:id="btnStartServer" layoutX="130.0" layoutY="29.0" mnemonicParsing="false" onAction="#startServer" prefHeight="25.0" prefWidth="109.0" text="Starto serverin" visible="false" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="paneKlientet" layoutY="69.0" prefHeight="530.0" prefWidth="900.0" visible="false">
+         <children>
+            <TableView fx:id="tblKlientet" layoutX="23.0" layoutY="59.0" prefHeight="396.0" prefWidth="850.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="59.0">
+              <columns>
+                <TableColumn id="kolId1" fx:id="kolId1" prefWidth="109.0" text="Nr i leternjoftimit" />
+                <TableColumn id="kolEmri" fx:id="kolEmri" prefWidth="85.0" text="Emri" />
+                <TableColumn id="kolMbiemri" fx:id="kolMbiemri" prefWidth="96.0" text="Mbiemri" />
+                <TableColumn id="kolTel" fx:id="kolTel" prefWidth="83.0" text="Nr.Telefonit" />
+                <TableColumn id="kolVetura1" fx:id="kolVetura1" prefWidth="84.0" text="Vetura" />
+                <TableColumn id="kolCmimi" fx:id="kolCmimi" prefWidth="60.0" text="Cmimi" />
+                <TableColumn id="kolAdresa" fx:id="kolAdresa" prefWidth="69.0" text="Adresa" />
+                <TableColumn id="kolDataFillimit" fx:id="kolDataFillimit" prefWidth="95.0" text="Data e Fillimit" />
+                <TableColumn id="kolDataMbarimit" fx:id="kolDataMbarimit" prefWidth="101.0" text="Data e Mbarimit" />
+                <TableColumn id="kolOra" fx:id="kolOra" prefWidth="65.0" text="Ora" />
+              </columns>
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem fx:id="cmFshij" mnemonicParsing="false" onAction="#fshijKlientin" text="Fshij" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+            </TableView>
+            <TextField fx:id="txtKerko" layoutX="118.0" layoutY="23.0" onAction="#kerko" onInputMethodTextChanged="#kerko" prefHeight="25.0" prefWidth="174.0" />
+            <Label layoutX="23.0" layoutY="27.0" text="Kerko klientin:">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnKerko" layoutX="306.0" layoutY="23.0" mnemonicParsing="false" onAction="#kerko" text="Kerko" />
+            <Button fx:id="btnRefresh" layoutX="817.0" layoutY="23.0" mnemonicParsing="false" onAction="#refreshTblKlientet" text="Refresh" />
+            <ComboBox fx:id="srtVetura" layoutX="555.0" layoutY="23.0" onAction="#sortVeturat" prefHeight="25.0" prefWidth="252.0" promptText="Zgjedh veturen" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="paneVeturat" layoutY="70.0" prefHeight="530.0" prefWidth="900.0" visible="false">
+         <children>
+            <TableView fx:id="tblView" layoutX="23.0" layoutY="59.0" prefHeight="436.0" prefWidth="850.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="59.0">
+        <columns>
+          <TableColumn id="kolId" fx:id="kolId" prefWidth="56.0" text="Id" />
+          <TableColumn id="kolVetura" fx:id="kolVetura" prefWidth="149.0" text="Vetura" />
+            <TableColumn id="kolModeli" fx:id="kolModeli" prefWidth="161.0" text="Modeli" />
+            <TableColumn id="kolKm" fx:id="kolKm" prefWidth="151.0" text="Kilometrazha" />
+            <TableColumn id="kolTargat" fx:id="kolTargat" prefWidth="117.0" text="Targat" />
+            <TableColumn id="kolNgjyra" fx:id="kolNgjyra" prefWidth="95.0" text="Ngjyra" />
+            <TableColumn id="kolDisponueshmeria" fx:id="kolDisponueshmeria" minWidth="0.0" prefWidth="120.0" text="Disponueshmeria" />
+        </columns>
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#setFree" text="Beje te lire" />
+                        <MenuItem mnemonicParsing="false" onAction="#fshijVeturen" text="Fshij veturen" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+      </TableView>
+            <Button fx:id="btnEdit" layoutX="152.0" layoutY="14.0" mnemonicParsing="false" onAction="#editPanel" prefHeight="25.0" prefWidth="116.0" text="Ndrysho veture" />
+            <Button fx:id="btnAdd" layoutX="23.0" layoutY="14.0" mnemonicParsing="false" onAction="#addPanel" prefHeight="25.0" prefWidth="116.0" text="Shto veture te re" />
+            <Button fx:id="btnRefresh" layoutX="817.0" layoutY="14.0" mnemonicParsing="false" onAction="#fillTblVeturat" text="Refresh" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

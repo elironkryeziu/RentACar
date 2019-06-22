@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="448.0" prefWidth="532.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chatclient.ChatClientController">
+   <children>
+      <TextArea fx:id="comment" layoutX="15.0" layoutY="366.0" prefHeight="58.0" prefWidth="373.0" promptText="Shkruaj mesazhin" />
+      <Button layoutX="392.0" layoutY="366.0" mnemonicParsing="false" onAction="#sendComment" prefHeight="58.0" prefWidth="59.0" text="Dergo" />
+      <Button fx:id="btnDil" layoutX="463.0" layoutY="14.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="59.0" text="Dilni" />
+      <TextArea fx:id="textArea" editable="false" layoutX="14.0" layoutY="14.0" prefHeight="341.0" prefWidth="438.0" />
+   </children>
+</AnchorPane>
